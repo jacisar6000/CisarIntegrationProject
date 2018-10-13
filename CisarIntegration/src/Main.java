@@ -1,11 +1,14 @@
+import java.util.Random;
 import java.util.Scanner;
+import java.math.*;
+import java.text.DecimalFormat;
 
 public class Main {
 
   private static boolean str1;
 
-  @SuppressWarnings("null")
-  public static void main(String[] args) {
+  public static void main(String[] args) { // String[] is a parameter and public static void
+                                           // main(String[] args) is a header
     // TODO Auto-generated method stub
 
     // I'm Joseph Cisar and welcome to my integration project! This project is a
@@ -29,17 +32,19 @@ public class Main {
     // String (str) represents character strings. Strings are constant and cannot be changed after
     // being created.
 
-    System.out.println("-------------------------------------------------");
-    System.out.println("| 1. Basic Calculator                           |");
-    System.out.println("| 2. Use relational and conditional operators   |");
-    System.out.println("| 3. Increment and decrement operators          |");
-    System.out.println("| 4. compareTo() && equalTo() strings           |"); // && is a logical
-                                                                             // operation for "and"
-    System.out.println("|                                               |");
-    System.out.println("|                                               |");
-    System.out.println("|                                               |");
-    System.out.println("|                                               |");
-    System.out.println("-------------------------------------------------");
+    System.out.println("------------------------------------------------------------");
+    System.out.println("| 1. Basic Calculator                                      |");
+    System.out.println("| 2. Use relational and conditional operators              |");
+    System.out.println("| 3. Increment and decrement operators                     |");
+    System.out.println("| 4. compareTo() and equalTo() strings                     |");
+    System.out.println("| 5. Math/Random class example                             |");
+    System.out.println("| 6. Switch statements                                     |");
+    System.out.println("| 7. Casting example                                       |");
+    System.out.println("| 8. Final example                                         |");
+    System.out.println("| 9. Escape equences                                       |");
+    System.out.println("| 10. View code: Create a method with arguments and return |");
+    System.out.println("| 11. View code: 3 string methods                          |");
+    System.out.println("------------------------------------------------------------");
 
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter choice here: ");
@@ -74,7 +79,7 @@ public class Main {
           double input1 = sc.nextDouble();
           System.out.println("Number 2: ");
           double input2 = sc.nextDouble();
-          System.out.println(input1 + input2);
+          System.out.println(input1 + input2); // (input1 + input2) is an argument
         } else if (num == 2) {
           System.out.println("Enter two decimal numbers to find the difference.");
           System.out.println("Number 1: ");
@@ -103,8 +108,6 @@ public class Main {
           System.out.println("Number 2: ");
           double input2 = sc.nextDouble();
           System.out.println(input1 % input2);
-        } else {
-          System.out.println("Incorrect input. Please try again.");
         }
       }
 
@@ -186,30 +189,30 @@ public class Main {
           String str2 = "compareTo example";
           String str3 = "You chose to compare three strings!";
 
-          int variable1 = str1.compareTo(str2);
+          int variable1 = str1.compareTo(str2); // Compares str1 and str2
           System.out.println("str1 and str2 comparison: " + variable1);
 
-          int variable2 = str1.compareTo(str3);
+          int variable2 = str1.compareTo(str3); // Compares str1 and str3
           System.out.println("str1 and str3 comparison: " + variable2);
 
-          int variable3 = str2.compareTo("compareTo example");
+          int variable3 = str2.compareTo("compareTo example"); // Compares str2 and the argument
           System.out.println("str2 and string argument comparison: " + variable3);
         }
         if (value == 2) {
 
           System.out.println("You chose to see if the strings are equal to one another.");
-          System.out.println("View code to see error.");
-          Object obj1 = null;
-          java.lang.String str1 = obj1.toString();
-          String("true1").equals("true1"); // this test is true, both strings have the
-                                           // same value
-          System.out.println(str1);
+          // Could not get this test to work
+          // str1.equals(str2);
+          // str1 = String("true1").equals("true1"); // this test is true, both strings have the
+          // same value
+          // System.out.println(str1);
 
-          boolean str2 = String("false1") == "false1"; // this test is false, they are not the same
-                                                       // object
-          // "==" compares the two object references and determines whether they refer to the same
-          // instance
-          System.out.println(str2);
+          boolean str5 = String("false1") == "false1"; // this test is false, they are not the same
+                                                       // object "==" compares the two object
+                                                       // references and determines
+                                                       // whether they refer to the same
+                                                       // instance
+          System.out.println(str5);
 
           boolean str3 = String("false2") == new String("false2"); // this test is false, a new
                                                                    // string will not
@@ -225,10 +228,151 @@ public class Main {
           System.out.println(str4);
         }
       }
+      if (mainMenuChoice == 5) {
+
+        System.out.println(
+            "Chose 1 to raise a random integer to a random integer or 2 to find the sine, cosine, and tangent of a random degree.");
+        int mathChoice = sc.nextInt();
+        System.out.println("------------------------------------------------------");
+        System.out.println("| 1. Raising a number to a power                     |");
+        System.out.println("| 2. Find the sine, cosine and tangent of a degree   |");
+        System.out.println("------------------------------------------------------");
+
+        if (mathChoice == 1) {
+          Random rand = new Random(); // Generates a random number
+          int value = rand.nextInt(4);
+          int value2 = rand.nextInt(4);
+          System.out
+              .println(value + " to the " + value2 + "th power is " + Math.pow(value, value2));
+        }
+        if (mathChoice == 2) {
+          Random rand = new Random();
+          int degree = rand.nextInt(360); // 360 is the limit
+          System.out.println("The sine of " + degree + "° is " + Math.sin(degree));
+          System.out.println("The cosine of " + degree + "° is " + Math.cos(degree));
+          System.out.println("The tangent of " + degree + "° is " + Math.tan(degree));
+        }
+      }
+      if (mainMenuChoice == 6) {
+
+        System.out.println("Enter a number 1-7 to find the corresponding day of the week.");
+        int day = sc.nextInt();
+        // A switch statement allows a variable to be tested for equality against a list of values,
+        // the values are called "case"
+        switch (day) {
+          case 1:
+            System.out.println("It's Sunday");
+            break;
+          case 2:
+            System.out.println("It's Monday");
+            break;
+          case 3:
+            System.out.println("It's Tuesday");
+            break;
+          case 4:
+            System.out.println("It's Wednesday");
+            break;
+          case 5:
+            System.out.println("It's Thursday");
+            break;
+          case 6:
+            System.out.println("It's Friday");
+            break;
+          case 7:
+            System.out.println("It's Saturday");
+            break;
+          default: // default output is what's printed when the incorrect input is entered
+            System.out.println("Incorrect input.");
+        }
+      }
+      if (mainMenuChoice == 7) {
+        // Casting is used to convert an object or variable of one type into another
+        double calculatedMark = 86.6;
+        int finalGrade = (int) calculatedMark; // In this example, 86.6 is converted into 87 by
+                                               // widening
+        System.out.println("The casted number is " + finalGrade);
+        break;
+      }
+      if (mainMenuChoice == 8) {
+        // When final is used, the final value of the variable cannot be changed once it has been
+        // assigned
+        final double PI = 3.14;
+        DecimalFormat df = new DecimalFormat("##.##"); // Decimal format allows you to control how
+                                                       // many decimals you want in your answer
+                                                       // The # sign holds the places
+        System.out.println("Enter an integer to multiply it by PI: ");
+        double choice8 = sc.nextDouble();
+        double product = choice8 * PI;
+        System.out.println(choice8 + " * " + PI + " is " + (df.format(product))); // Decimal format
+                                                                                  // is assigned
+      }
+      if (mainMenuChoice == 9) {
+        System.out.println("My Integration Project...\t is almost finshed!"); // Insert a tab in the
+                                                                              // text at this point
+        System.out.println("My Integration Project... is almost finshed!\b"); // Insert a backspace
+                                                                              // in the text at this
+                                                                              // point
+        System.out.println("My Integration Project...\n is almost finshed!"); // Insert a newline in
+                                                                              // the text at this
+                                                                              // point
+        System.out.println("My\r Integration Project... is almost finshed!"); // Insert a carriage
+                                                                              // return in the text
+                                                                              // at this point.
+        System.out.println("My Integration\f Project... is almost finshed!"); // Insert a formfeed
+                                                                              // in the text at this
+                                                                              // point.
+        System.out.println("My \'Integration Project\'... is almost finshed!"); // Insert a single
+                                                                                // quote character
+                                                                                // in the text at
+                                                                                // this point.
+        System.out.println("My \"Integration Project\"... is almost finshed!"); // Insert a double
+                                                                                // quote character
+                                                                                // in the text at
+                                                                                // this point.
+        System.out.println("My \\Integration Project\\... is almost finshed!"); // Insert a
+                                                                                // backslash
+                                                                                // character in the
+                                                                                // text at this
+                                                                                // point.
+        break;
+      }
+      if (mainMenuChoice == 10) {
+
+        class CreateMethod {
+          public void main(String[] args) {
+            double length = 17.0;
+            double width = 9.7;
+            System.out.println(calculateArea(length, width));
+          }
+
+          public double calculateArea(double side1, double side2) {
+            double area;
+            area = side1 * side2;
+            return area;
+          }
+        }
+        if (mainMenuChoice == 11) {
+          System.out.println("The code is there but they are not printing.");
+
+          String Str1 = new String("How long is this string?");
+          System.out.print("The string is " + Str1.length() + "characters long.");
+          System.out.println(Str1.length()); // The length() method gives the length of how many
+                                             // characters long the string is
+
+          String Str2 = "What number character is \"c\" in this string?";
+          char charNum = Str2.charAt(11);
+          System.out.println(charNum); // The charAt() method returns the character located at the
+                                       // number given
+
+          String Str3 = new String("is finally done!");
+          System.out.print("My Integration Project");
+          System.out.println(Str3.toString()); // The toString() method returns itself as a string
+        }
+      }
     }
   }
 
-  private static String String(String string) {
+  private static String String(String string) { // String is a method call
     // TODO Auto-generated method stub
     return null;
   }
