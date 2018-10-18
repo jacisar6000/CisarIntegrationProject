@@ -15,7 +15,7 @@ public class Main {
     // combination of my programming exercises and code demonstrated in module resources.
     // The main set-up is a main menu. By entering the number of your choice, the option will
     // appear.
-    // Use ctrl + shift + f to auto-format
+    // Use ctrl + shift + f to auto-format jjjjj
     System.out.println("Welome to my Integration Project!");
     int x = 4;
     int y = 4;
