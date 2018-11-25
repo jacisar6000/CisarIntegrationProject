@@ -739,7 +739,12 @@ public class Main {
 						break;
 					}
 				}
+				if (mainMenuChoice == 26) {
+		 			class rubric{
 
+					//Code is in its own seperate file 
+					}
+				}
 			}
 		}
 
