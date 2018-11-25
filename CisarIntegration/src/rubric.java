@@ -15,8 +15,7 @@ public class rubric {
 	public rubric(int h, int m) {
 		this(h, m, 0);
 	}
-
-	public rubric(int h, int m, int s) {
+ rubric(int h, int m, int s) {
 		setTime(h, m, s);
 	}
 

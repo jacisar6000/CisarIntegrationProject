@@ -59,6 +59,7 @@ public class Main {
 			System.out.println("| 23. Super to access obj/constructor                      |");
 			System.out.println("| 24. Multidimensional array                               |");
 			System.out.println("| 25. Searching a 2-D array                                |");
+			System.out.println("| 26. Rubric class                                         |");
 			System.out.println("------------------------------------------------------------");
 
 			Scanner sc = new Scanner(System.in);
@@ -741,6 +742,11 @@ public class Main {
 						break;
 					}
 				}
+				if (mainMenuChoice == 26) {
+					class rubric{
+					//Code is in its own seperate file
+					}
+				}
 
 			}
 		}
@@ -751,7 +757,6 @@ public class Main {
 	}
 
 	private static void display(int[][] firstarray) {
-		// TODO Auto-generated method stub
 
 	}
 
