@@ -736,7 +736,7 @@ public class Main {
 							for (column = 0; column <= columns - 1; column++) {
 								System.out.println(values[row][column]);
 							}
-						}
+						} 
 					} catch (Exception e) {
 						System.out.println("Incorrect input");
 						break;
