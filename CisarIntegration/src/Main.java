@@ -718,7 +718,8 @@ public class Main {
 					int[][] values = new int[rows][columns];
 					
 					//Counter variable for rows and columns
-					int row, column;
+					int row;
+					int column;
 					
 					//Get the values to store them in an array
 					for (row = 0; row <= rows - 1; row++)
