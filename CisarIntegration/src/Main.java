@@ -282,9 +282,9 @@ public class Main {
 						if (mathChoice == 2) {
 							Random rand = new Random();
 							int degree = rand.nextInt(360); // 360 is the limit
-							System.out.println("The sine of " + degree + "° is " + Math.sin(degree));
-							System.out.println("The cosine of " + degree + "° is " + Math.cos(degree));
-							System.out.println("The tangent of " + degree + "° is " + Math.tan(degree));
+							System.out.println("The sine of " + degree + "Â° is " + Math.sin(degree));
+							System.out.println("The cosine of " + degree + "Â° is " + Math.cos(degree));
+							System.out.println("The tangent of " + degree + "Â° is " + Math.tan(degree));
 						}
 					} catch (Exception e) {
 						System.out.println("Incorrect input");
@@ -751,7 +751,6 @@ public class Main {
 	}
 
 	private static void display(int[][] firstarray) {
-		// TODO Auto-generated method stub
 
 	}
 
