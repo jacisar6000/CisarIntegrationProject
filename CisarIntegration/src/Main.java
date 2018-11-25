@@ -689,59 +689,63 @@ public class Main {
 					Student2 stu = new Student2();
 				}
 				if (mainMenuChoice == 24) {
-					//Multidimenisonal array: declaring, instantiate, and initlizing
-					int firstarray[][] = {{8,9,10,11},{12,13,14,15},{1,2,3,4}};
-					int secondarray[][] = {{30,31,32,33},{43,1,2,5},{4,9,5,6}};
-					
+					// Multidimenisonal array: declaring, instantiate, and initlizing
+					int firstarray[][] = { { 8, 9, 10, 11 }, { 12, 13, 14, 15 }, { 1, 2, 3, 4 } };
+					int secondarray[][] = { { 30, 31, 32, 33 }, { 43, 1, 2, 5 }, { 4, 9, 5, 6 } };
+
 					System.out.println("First array");
-					display(firstarray); //"display" will display the arrays when initiated
-							
+					display(firstarray); // "display" will display the arrays when initiated
+
 					System.out.println("Second array");
-					display(secondarray);			
-					
-					//Searching the array to find the lengths of the each array
-					for(int i = 0; i < firstarray.length; i++){
-						   //This loop searches each row
-						   for(int j = 0; j < secondarray.length; j++) {
-						     //This loop searches each column in a row
-						   }
+					display(secondarray);
+
+					// Searching the array to find the lengths of the each array
+					for (int i = 0; i < firstarray.length; i++) {
+						// This loop searches each row
+						for (int j = 0; j < secondarray.length; j++) {
+							// This loop searches each column in a row
 						}
+					}
 				}
-			if (mainMenuChoice == 25) {
-				//2-D array
-				class TwoDArray
-				{
+				if (mainMenuChoice == 25) {
+					// 2-D array
+					class TwoDArray {
+
+					}
 					Scanner keyboard = new Scanner(System.in);
-					//Creating the array
+					// Creating the array
 					int rows = 3;
 					int columns = 4;
 					int[][] values = new int[rows][columns];
-					
-					//Counter variable for rows and columns
-					int row;
-					int column;
-					
-					//Get the values to store them in an array
-					for (row = 0; row <= rows - 1; row++)
-					{
-						for (column = 0; column <= columns - 1; column++)
-						{
+
+					// Counter variable for rows and columns
+					int column = 0, row;
+
+					// Get the values to store them in an array
+					for (row = 0; row <= rows - 1; row++) {
+						for (column = 0; column <= columns - 1; column++) {
 							System.out.println("Enter a number: ");
 							values[row][column] = keyboard.nextInt();
 						}
 					}
-					//Array output
-					System.out.println("Here is the value that was entered. ");
-					for (row = 0; column <= columns - 1; row++) {
-						for (column = 0; column <=columns - 1; column++)
-						{
-							System.out.println(values[row][column]);
+					try {
+						// Array output
+						System.out.println("Here is the value that was entered. ");
+						for (row = 0; column <= columns - 1; row++) {
+							for (column = 0; column <= columns - 1; column++) {
+								System.out.println(values[row][column]);
+							}
 						}
+					} catch (Exception e) {
+						System.out.println("Incorrect input");
+						break;
 					}
 				}
+
 			}
-			}
-		 catch (Exception e) {
+		}
+
+		catch (Exception e) {
 			System.out.println("Incorrect input");
 		}
 	}
