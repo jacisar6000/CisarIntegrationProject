@@ -741,7 +741,7 @@ public class Main {
 						System.out.println("Incorrect input");
 						break;
 					}
-				}
+				} 
 				if (mainMenuChoice == 26) {
 		 			class rubric{
 
