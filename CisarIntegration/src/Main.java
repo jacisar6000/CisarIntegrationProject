@@ -744,7 +744,7 @@ public class Main {
 				}
 				if (mainMenuChoice == 26) {
 					class rubric{
-					//Code is in its own seperate file
+					//Code is in its own seperate file 
 					}
 				}
 

@@ -7,7 +7,7 @@ public class rubric {
 	public rubric() {
 		this(0, 0, 0);
 	}
-
+ 
 	public rubric(int h) {
 		this(h, 0, 0);
 	}
