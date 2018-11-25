@@ -19,8 +19,7 @@ public class Main {
 		int y = 8;
 		int weeks = x + y;
 		System.out.println("This project will show you " + weeks + " weeks of what Java I have learned so far.");
-		System.out
-				.println("In the box below, select any of the following to learn or to use a program made with Java.");
+		System.out.println("In the box below, select any of the following to learn or to use a program made with Java.");
 		// List of Data Types:
 		// Integer (int) is used for whole numbers and will return a whole number during
 		// division.
@@ -70,8 +69,7 @@ public class Main {
 				if (mainMenuChoice == 1) {
 
 					try {
-						System.out
-								.println("Enter a number in the box below to chose what arthimic operation you want.");
+						System.out.println("Enter a number in the box below to chose what arthimic operation you want.");
 						System.out.println("----------------------");
 						System.out.println("| 1. Addition        |");
 						System.out.println("| 2. Subtraction     |");
