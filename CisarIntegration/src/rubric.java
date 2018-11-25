@@ -23,7 +23,7 @@ public class rubric {
 		setHour(h);
 		setMinute(m);
 		setSecond(s);
-	}
+	} 
 
 	public void setHour(int h) {
 		hour = ((h >= 0) && h < 24) ? h : 0;
