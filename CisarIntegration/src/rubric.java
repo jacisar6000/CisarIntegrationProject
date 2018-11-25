@@ -27,7 +27,7 @@ public class rubric {
 
 	public void setHour(int h) {
 		hour = ((h >= 0) && h < 24) ? h : 0;
-	}
+	} 
 
 	public void setMinute(int m) {
 		minute = ((m >= 0) && m < 60) ? m : 0;
