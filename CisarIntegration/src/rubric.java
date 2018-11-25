@@ -11,7 +11,7 @@ public class rubric {
 	public rubric(int h) {
 		this(h, 0, 0);
 	}
-
+ 
 	public rubric(int h, int m) {
 		this(h, m, 0);
 	}
