@@ -36,7 +36,7 @@ public class rubric {
 	public void setSecond(int s) {
 		second = ((s >= 0) && s < 60) ? s : 0;
 	}
-
+ 
 	public int getHour() {
 		return hour;
 	}
