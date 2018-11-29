@@ -8,6 +8,7 @@ public class Main {
     // static void
     // main(String[] args) is a header
 
+<<<<<<< HEAD
     // I'm Joseph Cisar and welcome to my integration project! This project is a
     // combination of my programming exercises and code demonstrated in module
     // resources.
@@ -37,6 +38,31 @@ public class Main {
     // cannot be
     // changed after
     // being created.
+=======
+		// I'm Joseph Cisar and welcome to my integration project! This project is a
+		// combination of my programming exercises and code demonstrated in module
+		// resources.
+		// The main set-up is a main menu. By entering the number of your choice, the
+		// option will
+		// appear.
+		// Use ctrl + shift + f to auto-format jjjjj
+		System.out.println("Welome to my Integration Project!");
+		int x = 8;
+		int y = 8;
+		int weeks = x + y;
+		System.out.println("This project will show you " + weeks + " weeks of what Java I have learned so far.");
+		System.out.println("In the box below, select any of the following to learn or to use a program made with Java.");
+		// List of Data Types:
+		// Integer (int) is used for whole numbers and will return a whole number during
+		// division.
+		// Double (double) is used for decimal values and will return a decimal in
+		// division.
+		// Boolean The boolean data type has only two possible values: true and false.
+		// Use this data type for simple flags that track true/false conditions.
+		// String (str) represents character strings. Strings are constant and cannot be
+		// changed after
+		// being created.
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
     try {
       System.out.println(
@@ -104,6 +130,7 @@ public class Main {
 
         if (mainMenuChoice == 1) {
 
+<<<<<<< HEAD
           try {
             System.out.println(
                 "Enter a number in the box below to chose what arthimic operation you want.");
@@ -114,6 +141,17 @@ public class Main {
             System.out.println("| 4. Division        |");
             System.out.println("| 5. Module          |");
             System.out.println("----------------------");
+=======
+					try {
+						System.out.println("Enter a number in the box below to chose what arthimic operation you want.");
+						System.out.println("----------------------");
+						System.out.println("| 1. Addition        |");
+						System.out.println("| 2. Subtraction     |");
+						System.out.println("| 3. Multiplication  |");
+						System.out.println("| 4. Division        |");
+						System.out.println("| 5. Module          |");
+						System.out.println("----------------------");
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
             int num = sc.nextInt();
 
@@ -328,10 +366,32 @@ public class Main {
 
         if (mainMenuChoice == 5) {
 
+<<<<<<< HEAD
           try {
             System.out.println(
                 "Chose 1 to raise a random integer to a random integer or 2 "
                     + "to find the sine, cosine, and tangent of a random degree.");
+=======
+						if (mathChoice == 1) {
+							Random rand = new Random(); // Generates a random number
+							int value = rand.nextInt(4);
+							int value2 = rand.nextInt(4);
+							System.out.println(value + " to the " + value2 + "th power is " + Math.pow(value, value2));
+						}
+						if (mathChoice == 2) {
+							Random rand = new Random();
+							int degree = rand.nextInt(360); // 360 is the limit
+							System.out.println("The sine of " + degree + "° is " + Math.sin(degree));
+							System.out.println("The cosine of " + degree + "° is " + Math.cos(degree));
+							System.out.println("The tangent of " + degree + "° is " + Math.tan(degree));
+						}
+					} catch (Exception e) {
+						System.out.println("Incorrect input");
+						break;
+					}
+				}
+				if (mainMenuChoice == 6) {
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
             System.out.println(
                 "------------------------------------------------------");
@@ -845,17 +905,54 @@ public class Main {
 
           rubric file = new rubric();
 
+<<<<<<< HEAD
         }
+=======
+					// Get the values to store them in an array
+					for (row = 0; row <= rows - 1; row++) {
+						for (column = 0; column <= columns - 1; column++) {
+							System.out.println("Enter a number: ");
+							values[row][column] = keyboard.nextInt();
+						}
+					}
+					try {
+						// Array output
+						System.out.println("Here is the value that was entered. ");
+						for (row = 0; column <= columns - 1; row++) {
+							for (column = 0; column <= columns - 1; column++) {
+								System.out.println(values[row][column]);
+							}
+						}
+					} catch (Exception e) {
+						System.out.println("Incorrect input");
+						break;
+					}
+				}
+				if (mainMenuChoice == 26) {
+		 			class rubric{
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
+<<<<<<< HEAD
       }
     }
+=======
+					//Code is in its own seperate file 
+					}
+				}
+			}
+		}
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
     catch (Exception e) {
       System.out.println("Incorrect input");
     }
   }
 
+<<<<<<< HEAD
   private static void display(int[][] firstarray) {
+=======
+	private static void display(int[][] firstarray) {
+>>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
   }
 
