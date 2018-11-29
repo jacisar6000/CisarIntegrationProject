@@ -1,5 +1,5 @@
 
-public class rubric {
+public class Rubric {
 	private int hour;
 	private int minute;
 	private int second;
