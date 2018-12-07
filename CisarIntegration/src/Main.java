@@ -1,14 +1,24 @@
-import java.util.ArrayList;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.*;
 
-public class Main {
 
-  public static void main(String[] args) { // String[] is a parameter and public
+/**
+ * The Main class is to hold all of 
+ * the methods for this project.
+ * @author Joseph Cisar
+ */
+public class Main {
+  /**
+   * The parameter here is to have a string for the beginning of each main class.
+   * @param args is used for the strings to be presented.
+   */
+  @SuppressWarnings("unused") 
+  public static void main(String[] args) {
+    
+    // String[] is a parameter and public
     // static void
     // main(String[] args) is a header
-
-<<<<<<< HEAD
     // I'm Joseph Cisar and welcome to my integration project! This project is a
     // combination of my programming exercises and code demonstrated in module
     // resources.
@@ -24,7 +34,8 @@ public class Main {
     System.out.println("This project will show you " + weeks
         + " weeks of what Java I have learned so far.");
     System.out.println(
-        "In the box below, select any of the following to learn or to use a program made with Java.");
+        "In the box below, select any of the following to learn or to use a program made with "
+            + " Java.");
     // List of Data Types:
     // Integer (int) is used for whole numbers and will return a whole number
     // during
@@ -38,31 +49,6 @@ public class Main {
     // cannot be
     // changed after
     // being created.
-=======
-		// I'm Joseph Cisar and welcome to my integration project! This project is a
-		// combination of my programming exercises and code demonstrated in module
-		// resources.
-		// The main set-up is a main menu. By entering the number of your choice, the
-		// option will
-		// appear.
-		// Use ctrl + shift + f to auto-format jjjjj
-		System.out.println("Welome to my Integration Project!");
-		int x = 8;
-		int y = 8;
-		int weeks = x + y;
-		System.out.println("This project will show you " + weeks + " weeks of what Java I have learned so far.");
-		System.out.println("In the box below, select any of the following to learn or to use a program made with Java.");
-		// List of Data Types:
-		// Integer (int) is used for whole numbers and will return a whole number during
-		// division.
-		// Double (double) is used for decimal values and will return a decimal in
-		// division.
-		// Boolean The boolean data type has only two possible values: true and false.
-		// Use this data type for simple flags that track true/false conditions.
-		// String (str) represents character strings. Strings are constant and cannot be
-		// changed after
-		// being created.
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
     try {
       System.out.println(
@@ -122,6 +108,7 @@ public class Main {
       System.out.println(
           "------------------------------------------------------------");
 
+      @SuppressWarnings("resource")
       Scanner sc = new Scanner(System.in);
       System.out.println("Enter choice here: ");
       int mainMenuChoice = sc.nextInt();
@@ -130,7 +117,6 @@ public class Main {
 
         if (mainMenuChoice == 1) {
 
-<<<<<<< HEAD
           try {
             System.out.println(
                 "Enter a number in the box below to chose what arthimic operation you want.");
@@ -141,17 +127,6 @@ public class Main {
             System.out.println("| 4. Division        |");
             System.out.println("| 5. Module          |");
             System.out.println("----------------------");
-=======
-					try {
-						System.out.println("Enter a number in the box below to chose what arthimic operation you want.");
-						System.out.println("----------------------");
-						System.out.println("| 1. Addition        |");
-						System.out.println("| 2. Subtraction     |");
-						System.out.println("| 3. Multiplication  |");
-						System.out.println("| 4. Division        |");
-						System.out.println("| 5. Module          |");
-						System.out.println("----------------------");
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
             int num = sc.nextInt();
 
@@ -213,7 +188,7 @@ public class Main {
           }
         }
 
-        if (mainMenuChoice == 2) {
+        else if (mainMenuChoice == 2) {
 
           try {
             System.out.println(
@@ -222,7 +197,8 @@ public class Main {
             System.out.println(
                 "Enter two numbers and see if the first number you entered is: ");
             System.out.println(
-                "greater than (>), less than (<), equal to (=), greater than or equal to (>=), less than or equal to (<=), or not equal (!=)");
+                "greater than (>), less than (<), equal to (=), greater than or "
+                    + "equal to (>=), less than or equal to (<=), or not equal (!=)");
             // >, <, <=,>= are relational
             // != and == are equality
             System.out.println("Enter two integers: ");
@@ -256,15 +232,15 @@ public class Main {
             System.out.println("Incorrect input");
             break;
           }
-        }
-        if (mainMenuChoice == 3) {
+        } else if (mainMenuChoice == 3) {
 
           System.out.println("Increment Operator example:");
           System.out.println("View code for explanation.");
-          int a = 5, b = 5;
+          int a = 5;
+          int b = 5;
 
-          System.out.println(++a); // outputs 6, ++ increments the value of a
-                                   // and then returns a
+          System.out.println(++a);
+          // outputs 6, ++ increments the value of a and then returns a
           System.out.println(a); // outputs 6
 
           System.out.println(b++); // outputs 5, ++ returns the value of b and
@@ -286,8 +262,7 @@ public class Main {
           // and then returns d
           System.out.println(d); // outputs 7
           break;
-        }
-        if (mainMenuChoice == 4) {
+        } else if (mainMenuChoice == 4) {
 
           try {
             System.out.println(
@@ -297,7 +272,7 @@ public class Main {
             System.out.println("| 1. compareTo() strings   |");
             System.out.println("| 2. equalTo() strings     |");
             System.out.println("----------------------------");
-            
+
             int value = sc.nextInt();
 
             if (value == 1) {
@@ -313,9 +288,10 @@ public class Main {
               int variable2 = str1.compareTo(str3); // Compares str1 and str3
               System.out.println("str1 and str3 comparison: " + variable2);
 
-              int variable3 = str2.compareTo("compareTo example"); 
+              int variable3 = str2.compareTo("compareTo example");
               // Compares str2 and the argument
-              System.out.println("str2 and string argument comparison: " + variable3);
+              System.out
+                  .println("str2 and string argument comparison: " + variable3);
             }
             if (value == 2) {
 
@@ -329,32 +305,25 @@ public class Main {
               // same value
               // System.out.println(str1);
 
-              boolean str5 = String("false1") == "false1"; // this test is
-                                                           // false, they are
-                                                           // not the same
+              boolean str5 = String("false1") == "false1";
+              // this test is false, they are not the same
               // object "==" compares the two object
               // references and determines
               // whether they refer to the same
               // instance
               System.out.println(str5);
 
-              boolean str3 = String("false2") == new String("false2"); // this
-                                                                       // test
-                                                                       // is
-                                                                       // false,
-                                                                       // a new
-              // string will not
+              boolean str3 = String("false2") == new String("false2");
+              // this test is false, a new string will not
               System.out.println(str3); // be equal
 
-              boolean str = "true2" == "true2"; // this test is true, both
-                                                // strings have the same value
+              boolean str = "true2" == "true2";
+              // this test is true, both strings have the same value
               // and are assigned to the same object
               System.out.println(str); // assigned to the same object
 
               boolean str4 = "true3" == "tr" + "ue" + "3"; // this test is true,
-              // the string
-              // literals are
-              // concatenated which will print them
+              // the string literals are concatenated which will print them
               // together
               System.out.println(str4);
             }
@@ -364,34 +333,12 @@ public class Main {
           }
         }
 
-        if (mainMenuChoice == 5) {
+        else if (mainMenuChoice == 5) {
 
-<<<<<<< HEAD
           try {
             System.out.println(
                 "Chose 1 to raise a random integer to a random integer or 2 "
                     + "to find the sine, cosine, and tangent of a random degree.");
-=======
-						if (mathChoice == 1) {
-							Random rand = new Random(); // Generates a random number
-							int value = rand.nextInt(4);
-							int value2 = rand.nextInt(4);
-							System.out.println(value + " to the " + value2 + "th power is " + Math.pow(value, value2));
-						}
-						if (mathChoice == 2) {
-							Random rand = new Random();
-							int degree = rand.nextInt(360); // 360 is the limit
-							System.out.println("The sine of " + degree + "° is " + Math.sin(degree));
-							System.out.println("The cosine of " + degree + "° is " + Math.cos(degree));
-							System.out.println("The tangent of " + degree + "° is " + Math.tan(degree));
-						}
-					} catch (Exception e) {
-						System.out.println("Incorrect input");
-						break;
-					}
-				}
-				if (mainMenuChoice == 6) {
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
             System.out.println(
                 "------------------------------------------------------");
@@ -425,17 +372,14 @@ public class Main {
             System.out.println("Incorrect input");
             break;
           }
-        }
-        if (mainMenuChoice == 6) {
+        } else if (mainMenuChoice == 6) {
 
           try {
             System.out.println(
                 "Enter a number 1-7 to find the corresponding day of the week.");
             int day = sc.nextInt();
             // A switch statement allows a variable to be tested for equality
-            // against a list
-            // of values,
-            // the values are called "case"
+            // against a list of values, the values are called "case"
             switch (day) {
               case 1:
                 System.out.println("It's Sunday");
@@ -458,80 +402,74 @@ public class Main {
               case 7:
                 System.out.println("It's Saturday");
                 break;
-              default: 
-                // default output is what's printed when the incorrect input is entered
+              default:
+                // default output is what's printed when the incorrect input is
+                // entered
                 System.out.println("Incorrect input.");
             }
           } catch (Exception e) {
             System.out.println("Incorrect input");
             break;
           }
-        }
-        if (mainMenuChoice == 7) {
+        } else if (mainMenuChoice == 7) {
           // Casting is used to convert an object or variable of one type into
           // another
           double calculatedMark = 86.6;
-          int finalGrade = (int) calculatedMark; 
+          int finalGrade = (int) calculatedMark;
           // In this example, 86.6 is converted into 87 by widening
           System.out.println("The casted number is " + finalGrade);
           break;
-        }
-        if (mainMenuChoice == 8) {
+        } else if (mainMenuChoice == 8) {
           // When final is used, the final value of the variable cannot be
-          // changed once it
-          // has been
-          // assigned
-          final double PI = 3.14;
-          DecimalFormat df = new DecimalFormat("##.##"); 
+          // changed once it has been assigned
+          final double Pi = 3.14;
+          DecimalFormat df = new DecimalFormat("##.##");
           // Decimal format allows you to control how
           // many decimals you want in your answer
           // The # sign holds the places
           System.out.println("Enter an integer to multiply it by PI: ");
           double choice8 = sc.nextDouble();
-          double product = choice8 * PI;
-          System.out.println(choice8 + " * " + PI + " is " + (df.format(product))); 
+          double product = choice8 * Pi;
+          System.out
+              .println(choice8 + " * " + Pi + " is " + (df.format(product)));
           // Decimal format is assigned
-        }
-        if (mainMenuChoice == 9) {
-          System.out.println("My Integration Project...\t is almost finshed!"); 
+        } else if (mainMenuChoice == 9) {
+          System.out.println("My Integration Project...\t is almost finshed!");
           // Insert a tab in the text at this point
-          
-          System.out.println("My Integration Project... is almost finshed!\b"); 
+
+          System.out.println("My Integration Project... is almost finshed!\b");
           // Insert a backspace in the text at this point
-          
-          System.out.println("My Integration Project...\n is almost finshed!"); 
+
+          System.out.println("My Integration Project...\n is almost finshed!");
           // Insert a newline in the text at this point
-          
-          System.out.println("My\r Integration Project... is almost finshed!"); 
+
+          System.out.println("My\r Integration Project... is almost finshed!");
           // Insert a carriage return in the text at this point.
-          
-          System.out.println("My Integration\f Project... is almost finshed!"); 
+
+          System.out.println("My Integration\f Project... is almost finshed!");
           // Insert a formfeed in the text at this point.
-          
+
           System.out
-              .println("My \'Integration Project\'... is almost finshed!"); 
+              .println("My \'Integration Project\'... is almost finshed!");
           // Insert a single quote character in the text at this point.
-          
+
           System.out
-              .println("My \"Integration Project\"... is almost finshed!"); // Insert
-                                                                            // a
-                                                                            // double
-          // quote character
-          // in the text at
-          // this point.
+              .println("My \"Integration Project\"... is almost finshed!");
+          // Insert a double quote character in the text at this point.
+
           System.out
-              .println("My \\Integration Project\\... is almost finshed!"); // Insert
-                                                                            // a
-          // backslash
-          // character in the
-          // text at this
-          // point.
+              .println("My \\Integration Project\\... is almost finshed!");
+          // Insert a backslash character in the text at this point.
           break;
-        }
+    }
 
-        if (mainMenuChoice == 10) {
-
-          @SuppressWarnings("unused")
+        else if (mainMenuChoice == 10) {
+          
+          /**
+           * The Create Method class for choice 10 is to find the area using int 
+           * and double.
+           * @author Joseph Cisar
+           */
           class CreateMethod {
             {
               double length = 17.0;
@@ -539,423 +477,435 @@ public class Main {
               System.out.println(calculateArea(length, width));
             }
 
+            /**
+             * @param side1 is the length
+             * @param side2 is the width
+             * @return
+             * The return statement for this method is to return the area.
+             */
             public double calculateArea(double side1, double side2) {
               double area;
               area = side1 * side2;
               return area;
+              
             }
           }
+    }
 
-          if (mainMenuChoice == 11) {
-            System.out.println("The code is there but they are not printing.");
+        else if (mainMenuChoice == 11) {
+          System.out.println("The code is there but they are not printing.");
 
-            String Str1 = new String("How long is this string?");
-            System.out
-                .print("The string is " + Str1.length() + "characters long.");
-            System.out.println(Str1.length()); // The length() method gives the
-                                               // length of how many
-            // characters long the string is
+          String str1 = new String("How long is this string?");
+          System.out
+              .print("The string is " + str1.length() + "characters long.");
+          System.out.println(str1.length());
+          // The length() method gives the length of how many
+          // characters long the string is
 
-            String Str2 = "What number character is \"c\" in this string?";
-            char charNum = Str2.charAt(11);
-            System.out.println(charNum); // The charAt() method returns the
-                                         // character located at the
-            // number given
+          String str2 = "What number character is \"c\" in this string?";
+          char charNum = str2.charAt(11);
+          System.out.println(charNum); // The charAt() method returns the
+          // character located at the
+          // number given
 
-            String Str3 = new String("is finally done!");
-            System.out.print("My Integration Project");
-            System.out.println(Str3.toString()); // The toString() method
-                                                 // returns itself as a string
+          String str3 = new String("is finally done!");
+          System.out.print("My Integration Project");
+          System.out.println(str3.toString());
+          // The toString() method returns itself as a string
+    }
+
+        else if (mainMenuChoice == 12) {
+          {
+            for (int i = 10; i > 1; i--)  {
+              System.out.println("The value of i is: " + i);
+              // The output of the program is "The value of
+              // the program is 10... and goes down to 2.
+              // i-- has the loop go in a descending order
+            }
           }
+    }
 
-          if (mainMenuChoice == 12) {
+        else if (mainMenuChoice == 13) {
+          // do/while loop
+          int i = 5;
+          do {
+            System.out.println(i);
+            i++;
+          } while (i <= 10);
+    }
 
+        else if (mainMenuChoice == 14) {
+          // Break and Continue
+          for (int i = 1; i <= 3; i++) {
+            if (i == 2) {
+              System.out.print("This is a continue statement.");
+              continue;
+            }
+            System.out.print("[i:" + i + "]"); // This block of code prints:
+            // continue when i is 2:
+            // [i:1][continue][i:3]
+          }
+          for (int i = 1; i <= 3; i++) {
+            if (i == 2) {
+              System.out.print("This is a break statement.");
+              break;
+            }
+            System.out.print("[i:" + i + "]"); // This block of code prints:
+            // break when i is 2:
+            // [i:1][break]
+          }
+       }
+
+        else if (mainMenuChoice == 15) {
+          // The ArrayList while using "add" adds the string to the output
+          @SuppressWarnings("serial")
+          ArrayList<String> cities = new ArrayList<String>() {
             {
-              for (int i = 10; i > 1; i--) {
-                System.out.println("The value of i is: " + i); // The output of
-                                                               // the program is
-                                                               // "The
-                // value of
-                // the program is 10... and goes down to
-                // 2.
-                // i-- has the loop go in a descending
-                // order
-              }
+              add("Fort Myers");
+              add("Estero");
+              add("Bonita Springs");
+              add("Naples");
+              add("Immokalee");
             }
-          }
+          };
+          System.out.println("The closest cities near FGCU are:" + cities);
+        } else if (mainMenuChoice == 16) {
 
-          if (mainMenuChoice == 13) {
-            // do/while loop
-            int i = 5;
-            do {
-              System.out.println(i);
-              i++;
-            } while (i <= 10);
-          }
+          // Declaring an array to hold grades
+          int[] scores = { 87, 75, 98, 100, 82, 72, 88, 92, 60, 78 };
 
-          if (mainMenuChoice == 14) {
-            // Break and Continue
-            for (int i = 1; i <= 3; i++) {
-              if (i == 2) {
-                System.out.print("This is a continue statement.");
-                continue;
-              }
-              System.out.print("[i:" + i + "]"); // This block of code prints:
-              // continue when i is 2:
-              // [i:1][continue][i:3]
-            }
-            for (int i = 1; i <= 3; i++) {
-              if (i == 2) {
-                System.out.print("This is a break statement.");
-                break;
-              }
-              System.out.print("[i:" + i + "]"); // This block of code prints:
-              // break when i is 2:
-              // [i:1][break]
-            }
-          }
+          // Declare a boolean variable for a flag
+          boolean found;
 
-          if (mainMenuChoice == 15) {
-            // The ArrayList while using "add" adds the string to the output
-            ArrayList<String> cities = new ArrayList<String>() {
-              {
-                add("Fort Myers");
-                add("Estero");
-                add("Bonita Springs");
-                add("Naples");
-                add("Immokalee");
-              }
-            };
-            System.out.println("The closest cities near FGCU are:" + cities);
-          }
-          if (mainMenuChoice == 16) {
+          // Declare a variable for a loop counter
+          int index;
 
-            // Declaring an array to hold grades
-            int[] scores = { 87, 75, 98, 100, 82, 72, 88, 92, 60, 78 };
+          // The flag must be False when it is started
+          found = false;
 
-            // Declare a boolean variable for a flag
-            boolean found;
+          // Set counter variable to 0
+          index = 0;
 
-            // Declare a variable for a loop counter
-            int index;
-
-            // The flag must be False when it is started
-            found = false;
-
-            // Set counter variable to 0
-            index = 0;
-
-            // Have the array be searched for a score equal to 100
-            while (found == false && index < scores.length) {
-              if (scores[index] == 100)
-                found = true;
-              else
-                index = index + 1;
+          // Have the array be searched for a score equal to 100
+          while (found == false && index < scores.length) {
+            if (scores[index] == 100) {
+              found = true;
+            } else {
+              index = index + 1;
             }
 
             // Print output
-            if (found)
+            if (found) {
               System.out.println("You got a 100 on test number " + (index + 1));
-            else
+            } else {
               System.out.println("You did not get a 100 on any test.");
-            // The output is "You got a 100 on test number 4"
-
-          }
-          if (mainMenuChoice == 17) {
-
-            try {
-              // Find the smallest integer in an array
-              int[] tenIntArray = new int[10];
-              int i, userIn;
-
-              Scanner KyBdIn = new Scanner(System.in);
-              System.out.println("Please enter 10 integer numbers ");
-
-              for (i = 0; i < tenIntArray.length; i++) {
-                System.out.println("Please enter integer " + i);
-                userIn = KyBdIn.nextInt();
-                tenIntArray[i] = userIn;
-              }
-            } catch (Exception e) {
-              System.out.println("Incorrect input");
-              break;
-            }
-
-            if (mainMenuChoice == 18) {
-
-              // Get the sum of the values in an array using an accumulator
-              int sumofarray[] = { 1, 2, 3, 4, 5 };
-              int sum = 0;
-
-              for (int counter = 0; counter < sumofarray.length; counter++) {
-                sum += sumofarray[counter];
-              }
-              System.out.println("The sum of these numbers is " + sum);
-            }
-
-            if (mainMenuChoice == 19) {
-
-              {
-                // Polymorphism is subclasses of a class being defined by their
-                // own unique
-                // behaviors and share some of the same functionality of the
-                // parent class
-                // In this case, Animal is the parent class and the species and
-                // sound of the
-                // species are the subclasses
-                new Lion();
-                Animal Lion = null;
-                Animal[] Safari = { Lion };
-                for (Animal anAnimal : Safari) {
-
-                }
-              }
-            }
-
-            class Animal {
-
-              public String showSpecies() {
-                return "Animal";
-              }
-
-              public void makeSound() {
-                System.out.println("Roar");
-              }
-            }
-
-            class Lion extends Animal {
-
-              public Lion() {
-              }
-
-              public String showSpecies() {
-                return "Lion";
-              }
-
-              public void makeSound() {
-                System.out.println("Roar");
-              }
+              // The output is "You got a 100 on test number 4"
             }
           }
-          if (mainMenuChoice == 20) {
-            // Overloading a method
-            // Classes can have two different arguments for this
-            class Start {
-              public int TenYears(int Age) {
-                return Age + 10;
-              }
+        } else if (mainMenuChoice == 17) {
 
-              public int TenYears(int Age, String Name) {
-                System.out.println(Name);
-                return TenYears(Age);
-              }
-            }
-          }
-          if (mainMenuChoice == 21) {
-
-            // Inheritance and its benefits
-            steak steakObject = new steak();
-            salad saladObject = new salad();
-          }
-          class food {
-
-            public void eat() {
-              System.out.println("New example of something edible");
-            }
-          }
-          // What both salad and steak have in common is that they are both food
-          // and
-          // edible.
-          // When the program is ran, if "steak" had no text, then both classes
-          // would
-          // print "New example of something edible"
-          // Both classes inherit what the food class contains sicnd they extend
-          // from the
-          // food class
-          // With what is in the code right now, only the salad class will
-          // inherit from
-          // the food class because the steak class has its own text
-
-          class salad extends food {
-
-          }
-          class steak extends food {
-
-            public void eat() {
-              System.out.println("This is the the steak method");
-            }
-          }
-        }
-        if (mainMenuChoice == 22) {
-          // Enhanced for loops are used to make loops more compact and easy to
-          // read
-          // They are designed for collections and arrays
-          int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-          for (int item : numbers) {
-            System.out
-                .println("This statement will print 10 times. See?" + item);
-          }
-        }
-        if (mainMenuChoice == 23) {
-          // Super to access objects and constructors
-          // Access objects
-          // Objects have return types
-          class Person1 { // Base class
-            void message() {
-              System.out.println("Person is the base class");
-            }
-          }
-
-          class Student extends Person1 { // Subclass
-            void message() {
-              System.out.println("Student is the subclass");
-            }
-
-            void display() {
-              // will reject or call current class message() method
-              message();
-
-              // Using super will call the parent class method
-              super.message();
-            }
-          }
-          Student s = new Student();
-
-          // calling display() of Student
-          s.display();
-
-          // Acess constructors
-          // Constructors have no return types
-          class Person // Person is the superclass
-          {
-            Person() {
-              System.out.println("Person class is the constructor");
-            }
-          }
-
-          class Student2 extends Person // Student2 is a subclass inheriting
-                                        // from the superclass Person
-          {
-            Student2() {
-              // This is reject or call the constructor
-              super();
-
-              System.out.println("Student class Constructor");
-            }
-          }
-          Student2 stu = new Student2();
-        }
-        if (mainMenuChoice == 24) {
-          // Multidimenisonal array: declaring, instantiate, and initlizing
-          int firstarray[][] = { { 8, 9, 10, 11 }, { 12, 13, 14, 15 },
-              { 1, 2, 3, 4 } };
-          int secondarray[][] = { { 30, 31, 32, 33 }, { 43, 1, 2, 5 },
-              { 4, 9, 5, 6 } };
-
-          System.out.println("First array");
-          display(firstarray); // "display" will display the arrays when
-                               // initiated
-
-          System.out.println("Second array");
-          display(secondarray);
-
-          // Searching the array to find the lengths of the each array
-          for (int i = 0; i < firstarray.length; i++) {
-            // This loop searches each row
-            for (int j = 0; j < secondarray.length; j++) {
-              // This loop searches each column in a row
-            }
-          }
-        }
-        if (mainMenuChoice == 25) {
-          // 2-D array
-          class TwoDArray {
-
-          }
-          Scanner keyboard = new Scanner(System.in);
-          // Creating the array
-          int rows = 3;
-          int columns = 4;
-          int[][] values = new int[rows][columns];
-
-          // Counter variable for rows and columns
-          int column = 0, row;
-
-          // Get the values to store them in an array
-          for (row = 0; row <= rows - 1; row++) {
-            for (column = 0; column <= columns - 1; column++) {
-              System.out.println("Enter a number: ");
-              values[row][column] = keyboard.nextInt();
-            }
-          }
           try {
-            // Array output
-            System.out.println("Here is the value that was entered. ");
-            for (row = 0; column <= columns - 1; row++) {
-              for (column = 0; column <= columns - 1; column++) {
-                System.out.println(values[row][column]);
-              }
+            // Find the smallest integer in an array
+            int[] tenIntArray = new int[10];
+            int i;
+            int userIn;
+
+            @SuppressWarnings("resource")
+            Scanner kyBdIn = new Scanner(System.in);
+            System.out.println("Please enter 10 integer numbers ");
+
+            for (i = 0; i < tenIntArray.length; i++) {
+              System.out.println("Please enter integer " + i);
+              userIn = kyBdIn.nextInt();
+              tenIntArray[i] = userIn;
             }
           } catch (Exception e) {
             System.out.println("Incorrect input");
             break;
           }
+
+          if (mainMenuChoice == 18) {
+
+            // Get the sum of the values in an array using an accumulator
+            int[] sumofarray = { 1, 2, 3, 4, 5 };
+            int sum = 0;
+
+            for (int counter = 0; counter < sumofarray.length; counter++) {
+              sum += sumofarray[counter];
+            }
+            System.out.println("The sum of these numbers is " + sum);
+          }
+
+          if (mainMenuChoice == 19) {
+
+            {
+              // Polymorphism is subclasses of a class being defined by their
+              // own unique
+              // behaviors and share some of the same functionality of the
+              // parent class
+              // In this case, Animal is the parent class and the species and
+              // sound of the
+              // species are the subclasses
+
+              Animal lion = null;
+              Animal[] safari = { lion };
+              for (Animal anAnimal : safari) {
+
+              }
+            }
+          }
+
+          /**
+           * The Animal class is the parent class for Lion.
+           * @author Joseph Cisar
+           */
+          class Animal {
+
+          }
+
+          /**
+           * The Lion class pulls all attributes from the Animal class
+           * becuase Lion is the subclass.
+           * @author Joseph Cisar
+           */
+          class Lion extends Animal {
+
+            public Lion() {
+            }
+
+          }
         }
-        if (mainMenuChoice == 26) {
+        if (mainMenuChoice == 20) {
+          // Overloading a method
+          // Classes can have two different arguments for this
+          /**
+           * The Start class is for showing when the age to begin is.
+           * @author Joseph Cisar
+           */
+          class Start {
+            /**
+             * @param age is the integer for which the Start process can begin.
+             * @return The age + 10 is returned.
+             */
+            public int tenYears(int age) {
+              return age + 10;
+            }
 
-          rubric file = new rubric();
-
-<<<<<<< HEAD
+            /**
+             * @param age The age is returned.
+             * @param Name The name is returned as well due to overloading.
+             * @return The age is returned but the Name is printed.
+             */
+            public int tenYears(int age, String Name) {
+              System.out.println(Name);
+              return tenYears(age);
+            }
+          }
         }
-=======
-					// Get the values to store them in an array
-					for (row = 0; row <= rows - 1; row++) {
-						for (column = 0; column <= columns - 1; column++) {
-							System.out.println("Enter a number: ");
-							values[row][column] = keyboard.nextInt();
-						}
-					}
-					try {
-						// Array output
-						System.out.println("Here is the value that was entered. ");
-						for (row = 0; column <= columns - 1; row++) {
-							for (column = 0; column <= columns - 1; column++) {
-								System.out.println(values[row][column]);
-							}
-						}
-					} catch (Exception e) {
-						System.out.println("Incorrect input");
-						break;
-					}
-				}
-				if (mainMenuChoice == 26) {
-		 			class rubric{
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
+        if (mainMenuChoice == 21) {
 
-<<<<<<< HEAD
+          // Inheritance and its benefits
+          Steak steakObject = new Steak();
+          Salad saladObject = new Salad();
+        }
+        /**
+         * The Food class has a set of code that will work for its subclasses.
+         * @author Joseph Cisar
+         */
+        class Food {
+
+          public void eat() {
+            System.out.println("New example of something edible");
+          }
+        }
+        // What both salad and steak have in common is that they are both food
+        // and
+        // edible.
+        // When the program is ran, if "steak" had no text, then both classes
+        // would
+        // print "New example of something edible"
+        // Both classes inherit what the food class contains since they extend
+        // from the
+        // food class
+        // With what is in the code right now, only the salad class will
+        // inherit from
+        // the food class because the steak class has its own text
+
+        /**
+         * The Salad class is empty to show the process of extending.
+         * @author Joseph Cisar
+         */
+        class Salad extends Food {
+
+        }
+
+        /**
+         * The Steak class is extending from the food class and has its own code.
+         * @author Joseph Cisar
+         */
+        class Steak extends Food {
+
+          public void eat() {
+            System.out.println("This is the the steak method");
+          }
+        }
       }
-    }
-=======
-					//Code is in its own seperate file 
-					}
-				}
-			}
-		}
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
+      if (mainMenuChoice == 22) {
+        // Enhanced for loops are used to make loops more compact and easy to
+        // read
+        // They are designed for collections and arrays
+        int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        for (int item : numbers) {
+          System.out.println("This statement will print 10 times. See?" + item);
+        }
+      }
+      if (mainMenuChoice == 23) {
+        // Super to access objects and constructors
+        // Access objects
+        // Objects have return types
+        /**
+         * The Person1 class shows how it is the base classs
+         * @author Joseph Cisar
+         */
+        class Person1 { // Base class
+          void message() {
+            System.out.println("Person is the base class");
+          }
+        }
+
+        /**
+         * <p>The Student class extends Person1 because it is a subclass.
+         * The Student class can call from the Person class if it uses 
+         * super.message(). It doesn't extend by using message().</p>
+         * @author Joseph Cisar
+         */
+        class Student extends Person1 { // Subclass
+          void message() {
+            System.out.println("Student is the subclass");
+          }
+
+          void display() {
+            // will reject or call current class message() method
+            message();
+
+            // Using super will call the parent class method
+            super.message();
+          }
+        }
+        
+        Student s = new Student();
+
+        // calling display() of Student
+        s.display();
+        // Acess constructors, Constructors have no return types
+        /**
+         * Representing constructors.
+         * Subclasses are present as well.
+         * @author Joseph Cisar
+         */
+        class Person // Person is the superclass
+   {
+          Person() {
+            System.out.println("Person class is the constructor");
+          }
+        }
+
+        // Student2 is a subclass inheriting from the superclass Person
+        /**
+         * This is representing a student as a person.
+         * @author Joseph Cisar
+         */
+        class Student2 extends Person {
+          Student2() {
+            // This is reject or call the constructor
+            super();
+
+            System.out.println("Student class Constructor");
+          }
+        }
+        
+        Student2 stu = new Student2();
+      }
+      if (mainMenuChoice == 24) { // Multidimenisonal array: declaring, instantiate, and initlizing
+        int[][] firstarray = { { 8, 9, 10, 11 }, { 12, 13, 14, 15 },{ 1, 2, 3, 4 } };  
+        int[][] secondarray = { { 30, 31, 32, 33 }, { 43, 1, 2, 5 },{ 4, 9, 5, 6 } };
+        System.out.println("First array");
+        display(firstarray); // "display" will display the arrays when initiated
+        System.out.println("Second array"); 
+        display(secondarray);
+
+        // Searching the array to find the lengths of the each array
+        for (int i = 0; i < firstarray.length; i++) {
+          // This loop searches each row
+          for (int j = 0; j < secondarray.length; j++) {
+            // This loop searches each column in a row
+          }
+        }
+      }
+      if (mainMenuChoice == 25) {
+        // 2-D array
+        /**
+         * This is creating a 2-D array using rows and columns to make a table.
+         * @author Joseph Cisar
+         */
+        class TwoDArray {
+
+        }
+
+        @SuppressWarnings("resource")
+        Scanner keyboard = new Scanner(System.in);
+        // Creating the array
+        int rows = 3;
+        int columns = 4;
+        int[][] values = new int[rows][columns];
+
+        // Counter variable for rows and columns
+        int column = 0;
+        int row;
+
+        // Get the values to store them in an array
+        for (row = 0; row <= rows - 1; row++) {
+          for (column = 0; column <= columns - 1; column++) {
+            System.out.println("Enter a number: ");
+            values[row][column] = keyboard.nextInt();
+          }
+        }
+        try {
+          // Array output
+          System.out.println("Here is the value that was entered. ");
+          for (row = 0; column <= columns - 1; row++) {
+            for (column = 0; column <= columns - 1; column++) {
+              System.out.println(values[row][column]);
+            }
+          }
+        } catch (Exception e) {
+          System.out.println("Incorrect input");
+        }
+      }
+      if (mainMenuChoice == 26) {
+
+        Rubric file = new Rubric();
+
+      }
+
+  }
 
     catch (Exception e) {
       System.out.println("Incorrect input");
     }
   }
 
-<<<<<<< HEAD
+  /**
+   * @param firstarray This is for the firstawway numbers to create the array.
+   */
   private static void display(int[][] firstarray) {
-=======
-	private static void display(int[][] firstarray) {
->>>>>>> branch 'master' of https://github.com/jacisar6000/CisarIntegrationProject
 
   }
 
+  /**
+   * @param string A string is shown for this parameter.
+   * @return null means nothing is returned.
+   */
   private static String String(String string) {
 
     return null;
